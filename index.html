@@ -11,22 +11,23 @@
     </head>
     <body>
         <h1>Jogo da Velha</h1>
-        <button>Começar</button>
+        <button>jogar!</button>
+        <p id="jogadorAtual"></p>
         <div id="jogo">
             <section>
-                <div></div>
-                <div></div>
-                <div></div>
+                <div onclick="fazJogada(this,0);"></div>
+                <div onclick="fazJogada(this,1);"></div>
+                <div onclick="fazJogada(this,2);"></div>
             </section>
             <section>
-                <div></div>
-                <div></div>
-                <div></div>
+                <div onclick="fazJogada(this,3);"></div>
+                <div onclick="fazJogada(this,4);"></div>
+                <div onclick="fazJogada(this,5);"></div>
             </section>
             <section>
-                <div></div>
-                <div></div>
-                <div></div>
+                <div onclick="fazJogada(this,6);"></div>
+                <div onclick="fazJogada(this,7);"></div>
+                <div onclick="fazJogada(this,8);"></div>
             </section> 
         </div>               
     </body>
