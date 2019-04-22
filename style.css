@@ -18,6 +18,11 @@ body div {
     display: flex;
     flex-direction: row;
     padding: 10px;
+    display: flex;
+}
+
+#jogo {
+    display: none;
 }
 
 body section:first-child div:nth-child(1),
