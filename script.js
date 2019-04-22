@@ -7,10 +7,10 @@ function comecaJogo() {
     let jogo = document.getElementById("#jogo");
     let nomeJogador1 = prompt("Digite o nome do jogador 1:");
     let nomeJogador2 = prompt("Digite o nome do jogador 2:");
-    if (jogador1 == "" || jogador1 == null) {
+    if (jogador1 == "") {
         jogador1 = "Jogador 1";
     }
-    else if (jogador2 == "" || jogador2 == null) {
+    else if (jogador2 == "") {
         jogador2 = "Jogador 2";
     }
     else {
@@ -52,6 +52,18 @@ function fazJogada(cel,pos) {
     verificaLinha();
     verificaDiagonal();
     verificaColuna();
+    if ( tabuleiroIsFilled() ) {
+        alert ('Nobody wins! :(. Try Again');
+        reset();
+    }
+}
+
+tabuleiroIsFilled = function() {
+    var preenchidos = 0;
+        for(var i = 0; i < tabuleiro.length; i++)
+            if(tabuleiro[i]	!= undefined) 
+                preenchidos++;
+        return preenchidos == tabuleiro.length;
 }
 
 function verificaLinha() {
